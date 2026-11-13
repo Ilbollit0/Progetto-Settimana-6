@@ -1,0 +1,70 @@
+/* Atelier — Week Project Settimana VI
+   Solo quello che Bootstrap non fa già: colori brand, altezza hero, hover card. */
+
+
+/* === Variabili (valori da colori.txt) === */
+
+:root {
+    --brand-primary: hsl(20, 30%, 35%);       /* button, testo, sfondo principale, hero */
+    --brand-primary-hover: hsl(20, 30%, 27%); /* button hover */
+    --brand-secondary: hsl(20, 20%, 15%);     /* nav + footer */
+    --link-footer-hover: hsl(40, 30%, 90%);
+    --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
+    --radius-base: 8px;
+}
+
+
+/* === Override Bootstrap === */
+
+/* .bg-primary, .bg-secondary e .text-primary di Bootstrap hanno !important */
+.bg-primary {
+    background-color: var(--brand-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--brand-secondary) !important;
+}
+
+.text-primary {
+    color: var(--brand-primary) !important;
+}
+
+/* i bottoni Bootstrap leggono i colori dalle variabili --bs-btn-* */
+.btn-primary {
+    --bs-btn-bg: var(--brand-primary);
+    --bs-btn-border-color: var(--brand-primary);
+    --bs-btn-hover-bg: var(--brand-primary-hover);
+    --bs-btn-hover-border-color: var(--brand-primary-hover);
+    --bs-btn-active-bg: var(--brand-primary-hover);
+    --bs-btn-active-border-color: var(--brand-primary-hover);
+    --bs-btn-border-radius: var(--radius-base);
+}
+
+
+/* === Sezioni === */
+
+.hero {
+    min-height: 80vh;
+}
+
+.card-elevata {
+    border: 0;
+    border-radius: var(--radius-base);
+    box-shadow: var(--shadow-card);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card-hover);
+    }
+}
+
+.link-footer {
+    color: #fff;
+    transition: color 250ms ease;
+
+    &:hover {
+        color: var(--link-footer-hover);
+    }
+}
