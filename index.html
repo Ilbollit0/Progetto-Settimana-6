@@ -1,14 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atelier — Studio di architettura</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md bg-secondary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#studio">Atelier</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Apri menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#studio">Studio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="studio" class="hero bg-primary text-white d-flex align-items-center justify-content-center text-center">
+            <div class="container">
+                <h1 class="fw-bold mb-3">Architettura per spazi che parlano</h1>
+                <p class="lead mb-4">Progettiamo case, uffici e spazi commerciali con attenzione alla luce, ai materiali e al contesto.</p>
+                <a href="#contatti" class="btn btn-primary btn-lg">Inizia un progetto</a>
+            </div>
+        </section>
+
+        <!-- SERVIZI -->
+        <section id="servizi" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">I nostri servizi</h2>
+                    <p class="text-secondary">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <article class="card card-elevata h-100 text-center p-4">
+                            <i class="bi bi-house-door fs-1 text-primary mb-2"></i>
+                            <h3 class="h5 fw-bold">Progettazione residenziale</h3>
+                            <p class="text-secondary mb-0">Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla consegna delle chiavi.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card card-elevata h-100 text-center p-4">
+                            <i class="bi bi-lamp fs-1 text-primary mb-2"></i>
+                            <h3 class="h5 fw-bold">Interior design</h3>
+                            <p class="text-secondary mb-0">Allestimenti d'interno per case e uffici, con materiali selezionati e arredo su misura.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card card-elevata h-100 text-center p-4">
+                            <i class="bi bi-bricks fs-1 text-primary mb-2"></i>
+                            <h3 class="h5 fw-bold">Ristrutturazioni</h3>
+                            <p class="text-secondary mb-0">Riqualificazione di spazi esistenti, gestione dei lavori e coordinamento con le imprese.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATTI -->
+        <section id="contatti" class="py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">Contattaci</h2>
+                    <p class="text-secondary">Compila il form, ti rispondiamo entro 48 ore.</p>
+                </div>
+
+                <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                    <form id="form-contatti">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" id="nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipo" class="form-label">Tipo di progetto</label>
+                            <select id="tipo" class="form-select">
+                                <option>Residenziale</option>
+                                <option>Interior design</option>
+                                <option>Ristrutturazione</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="messaggio" class="form-label">Messaggio</label>
+                            <textarea id="messaggio" class="form-control" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Invia</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <h3 class="h5 fw-bold">Atelier</h3>
+                    <p class="mb-0">
+                        Studio di architettura<br>
+                        <i class="bi bi-geo-alt me-1"></i>Via dei Pioppi 12, Milano
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h5 fw-bold">Link</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-footer text-decoration-none" href="#studio">Studio</a></li>
+                        <li><a class="link-footer text-decoration-none" href="#servizi">Servizi</a></li>
+                        <li><a class="link-footer text-decoration-none" href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="h5 fw-bold">Contatti</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="bi bi-envelope me-1"></i><a class="link-footer text-decoration-none" href="mailto:info@atelier.example">info@atelier.example</a></li>
+                        <li><i class="bi bi-telephone me-1"></i><a class="link-footer text-decoration-none" href="tel:+390200001111">+39 02 0000 1111</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <p class="text-center small mb-0">© 2026 Atelier — tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
